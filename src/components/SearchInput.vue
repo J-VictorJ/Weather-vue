@@ -24,7 +24,7 @@ const handleSearch = () => {
 }
 const getWeather = async (id) => {
   const res = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=dc56d4877f37413585d211925242805&q=id:${id}&days=6&aqi=no&alerts=no`
+    `https://api.weatherapi.com/v1/forecast.json?key=dc56d4877f37413585d211925242805&q=id:${id}&days=6&aqi=no&alerts=no`
   )
 
   const data = await res.json()
@@ -44,7 +44,7 @@ const getWeather = async (id) => {
         <i class="fa-solid fa-magnifying-glass p-2 text-indigo-600"></i>
         <input
           type="text"
-          placeholder="Search for a place"
+          placeholder="Procure Algum Lugar"
           class="rounded-r-lg p-2 border-0 outline-0 focus:ring-2 focus:ring-indigo-600 ring-inset w-full"
           v-model="searchTerm.query"
           @input="handleSearch"
